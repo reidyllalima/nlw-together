@@ -4,6 +4,28 @@
   box-sizing: border-box;
 }
 
+img {
+  width: 100%;
+  height: auto;
+}
+
+:root {
+}
+
 #header {
   height: 4.5rem;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+}
+
+.logo {
+}
+
+.container {
+  width: 90%;
+  margin-left: 1.5rem;
+  margin-right: 1.5rem;
 }
