@@ -44,8 +44,13 @@ h1 {
   -webkit-font-smoothing: auto;
 }
 
+.button {
+}
+
 /* ---------- Layout ----------   */
 #header {
+  border-bottom: 1px solid #e4e4e4;
+  margin-bottom: 2rem;
 }
 
 nav {
@@ -56,12 +61,47 @@ nav {
 }
 
 .logo {
+  font: 700 1.31rem 'Poppins', sans-serif;
+  color: var(--title-color);
+}
+
+.logo span {
+  color: var(--base-color);
 }
 
 .container {
-  width: 90%;
+  width: 100%;
   margin-left: 1.5rem;
   margin-right: 1.5rem;
 }
 
+.grid {
+  display: grid;
+  gap: 2rem;
+}
+
+.section {
+  padding: 5rem 0;
+}
 /* ---------- Home ----------   */
+#home .container {
+  margin: 0;
+}
+
+#home .image::before {
+  content: '';
+  height: 2rem;
+  width: 2rem;
+  background: var(--base-color-second);
+  position: absolute;
+}
+
+#home .image img {
+  position: relative;
+  right: 2.93rem;
+}
+
+#home .text {
+  margin-left: 1.5rem;
+  margin-right: 1.5rem;
+}
