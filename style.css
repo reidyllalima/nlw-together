@@ -16,7 +16,7 @@ img {
 
 /* ---------- Variables ----------   */
 :root {
-  /*--header-height: 4.5rem;*/
+  --header-height: 4.5rem;
 
   /* colors */
   --hue: 159;
@@ -53,35 +53,24 @@ h1 {
   padding: 0 2rem;
   border-radius: 0.25rem;
   font: 500 1rem 'DM Sans', sans-serif;
+  transition: background 0.3s;
 }
 
 .button:hover {
+  background-color: var(--base-color-alt);
+}
+
+.divider-1 {
+  height: 1px;
+  background: linear-gradient(
+    270deg,
+    hsla(var(--hue), 36%, 57%, 1) 0%,
+    hsla(var(--hue), 65%, 88%, 0.34) 100%
+  );
 }
 
 /* ---------- Layout ----------   */
-#header {
-  border-bottom: 1px solid #e4e4e4;
-  margin-bottom: 2rem;
-}
-
-nav {
-  height: 4.5rem;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
-.logo {
-  font: 700 1.31rem 'Poppins', sans-serif;
-  color: var(--title-color);
-}
-
-.logo span {
-  color: var(--base-color);
-}
-
 .container {
-  width: 100%;
   margin-left: 1.5rem;
   margin-right: 1.5rem;
 }
@@ -94,7 +83,47 @@ nav {
 .section {
   padding: 5rem 0;
 }
+
+#header {
+  border-bottom: 1px solid #e4e4e4;
+  margin-bottom: 2rem;
+  display: flex;
+
+  /*   Colocar a header fixa    */
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100; /* acima de tudo */
+  background-color: var(--body-color);
+}
+
+nav {
+  height: var(--header-height);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.logo {
+  font: 700 1.31rem 'Poppins', sans-serif;
+  color: var(--title-color);
+}
+
+.logo span {
+  color: var(--base-color);
+}
+
+main {
+  margin-top: var(--header-height);
+}
+
 /* ---------- Home ----------   */
+#home {
+  overflow: hidden; /* imagem ficar dentro do espaço do container */
+}
+
 #home .container {
   margin: 0;
 }
