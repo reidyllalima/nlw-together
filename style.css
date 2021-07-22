@@ -35,6 +35,10 @@ img {
 }
 
 /* ---------- Base ----------   */
+html {
+  scroll-behavior: smooth; /* barra de rolagem suave */
+}
+
 body {
   font: 400 1rem 'DM Sans', sans-serif;
   color: var(--text-color);
@@ -101,6 +105,14 @@ body {
   margin-bottom: 1rem;
 }
 
+.section header {
+  margin-bottom: 4rem;
+}
+
+.section header strong {
+  color: var(--base-color);
+}
+
 #header {
   border-bottom: 1px solid #e4e4e4;
   margin-bottom: 2rem;
@@ -114,6 +126,24 @@ body {
   z-index: 100; /* acima de tudo */
   background-color: var(--body-color);
 }
+
+#header.scroll {
+  /*  background: var(--base-color); */
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Muda a cor da header junto com o background
+
+#header.scroll .logo span {
+  color: white;
+}
+
+#header.scroll .icon-menu {
+  color: white;
+  transition: 0.3s;
+}
+
+*/
 
 main {
   margin-top: calc(var(--header-height) + 2rem);
@@ -171,6 +201,12 @@ nav ul li a:hover::after {
 nav .menu {
   opacity: 0;
   visibility: hidden;
+  top: -20rem;
+  transition: 0.2s;
+}
+
+nav .menu ul {
+  display: none;
 }
 
 /* ------------- SHOW MENU ------------ */
@@ -190,6 +226,10 @@ nav.show .menu {
   place-content: center;
 }
 
+nav.show .menu ul {
+  display: grid;
+}
+
 nav.show ul.grid {
   gap: 4rem;
 }
@@ -204,14 +244,17 @@ nav.show ul.grid {
 nav .icon-close {
   visibility: hidden;
   opacity: 0;
-
+  top: -1.5rem;
   position: absolute;
   right: 1.5rem;
+
+  transition: 0.2s;
 }
 
-nav.show .icon-close {
+nav.show div.icon-close {
   visibility: visible;
   opacity: 1;
+  top: 1.5rem;
 }
 
 /* ---------- Home ----------   */
@@ -299,4 +342,30 @@ nav.show .icon-close {
 #about .text {
   margin-left: 1.5rem;
   margin-right: 1.5rem;
+}
+
+/* ---------- SERVICES ----------   */
+
+.cards.grid {
+  gap: 1.5rem;
+}
+
+.card {
+  padding: 3.625rem 2rem;
+  box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.08);
+  border-bottom: 0.25rem solid var(--base-color);
+  border-radius: 0.25rem 0.25rem 0 0;
+  text-align: center;
+}
+
+.card i {
+  display: block;
+  margin-bottom: 1.5rem;
+  font-size: 5rem;
+  color: var(--base-color);
+}
+
+.card .title {
+  font-size: 1.5rem;
+  margin-bottom: 0.75rem;
 }
