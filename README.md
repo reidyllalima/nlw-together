@@ -1,7 +1,2 @@
-# nlw-together
 
-# Reidylla Lima - BSI UFRPE
-
-# Administradora de Redes - PoP-PE/RNP
-
-# 23 de Jun de 2021 (aula 01);
+![image](https://user-images.githubusercontent.com/39463849/232839348-33178531-a48b-4f9d-9871-a513486a8372.png)
